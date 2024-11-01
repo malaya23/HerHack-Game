@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creature Collector Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="registration">
+        <h1>Welcome to the Creature Collector Game!</h1>
+        <input type="text" id="username" placeholder="Enter your username" />
+        <button id="register">Register</button>
+    </div>
+    <div id="game" class="hidden">
+        <h1>Creature Collector Game</h1>
+        <button id="scanQR">Scan QR Code</button>
+        <video id="video" width="300" height="200" autoplay></video>
+        <canvas id="canvas" class="hidden"></canvas>
+        <div id="dialogueContainer" class="hidden">
+            <h2 id="creatureGreeting"></h2>
+            <h2 id="question"></h2>
+            <input type="text" id="answer" placeholder="Your answer...">
+            <button id="submitAnswer">Submit Answer</button>
+        </div>
+        <div id="result" class="hidden">
+            <h2>Results</h2>
+            <p id="creatureCount"></p>
+            <p id="score"></p>
+            <button id="restart">Play Again</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
